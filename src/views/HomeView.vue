@@ -3,7 +3,5 @@ import Specie from '../components/SpecieCard.vue'
 </script>
 
 <template>
-  <main>
-    <Specie />
-  </main>
+  <h1>List of endangered species</h1>
 </template>
