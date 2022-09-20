@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "http://bloowatch.org/developers/json/species",
+  baseURL: "https://my-json-server.typicode.com/JhinAhri12/ShepardApi/species",
   withCredentials: false,
   headers: {
     Accept: "application/json",

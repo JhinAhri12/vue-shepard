@@ -4,8 +4,9 @@
     :to="{ name: 'SpecieDetails', params: { id: specie.id } }"
   >
     <div class="specie-card">
-      <span>@{{ specie.time }} on {{ specie.date }}</span>
-      <h4>{{ specie.title }}</h4>
+      
+      <h2>{{ specie.name }}</h2>
+      <img :src="specie.img" alt="animals">
     </div>
   </router-link>
 </template>
