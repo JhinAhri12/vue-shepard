@@ -8,6 +8,7 @@
 <script>
 import SpecieCard from "@/components/SpecieCard.vue";
 import SpecieService from "@/services/SpecieService.js";
+import NProgress from "nprogress";
 export default {
   name: "HomeView",
   components: {
@@ -19,7 +20,7 @@ export default {
     }
   },
    beforeRouteEnter(routeTo, routeFrom, next) {
-    
+    NProgress.start();
     SpecieService.getSpecies()
       .then((response) => {
         next((comp) => {
@@ -30,6 +31,7 @@ export default {
         next({ name: "NetworkError" });
       })
       .finally(() => {
+        NProgress.done();
       });
   },
 }
