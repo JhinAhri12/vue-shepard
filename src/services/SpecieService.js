@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "https://my-json-server.typicode.com/JhinAhri12/ShepardApi/species",
+  baseURL: "https://my-json-server.typicode.com/JhinAhri12/ShepardApi",
   withCredentials: false,
   headers: {
     Accept: "application/json",
@@ -12,8 +12,12 @@ const apiClient = axios.create({
 export default {
     getSpecies() {
       return apiClient
-        .get()
+        .get("/species/")
         .then(sleeper(1000));
+    },
+    getSpecie(id) {
+      return apiClient
+        .get("/species/" + id)
     },
   };
 
