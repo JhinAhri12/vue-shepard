@@ -1,10 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
-import SpecieDetails from '@/views/specie/SpecieDetails.vue'
 import NotFound from "@/views/NotFound.vue";
 import NetworkError from "@/views/NetworkError.vue";
-import SpecieLayout from "@/views/specie/SpecieLayout.vue";
+import SpecieDetail from "@/views/specie/SpecieDetail.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,16 +15,9 @@ const router = createRouter({
     },
     {
       path: "/species/:id",
-      name: "SpecieLayout",
+      name: "SpecieDetail",
       props: true,
-      component: SpecieLayout,
-      children: [
-        {
-          path: "",
-          name: "SpecieDetails",
-          component: SpecieDetails,
-        },
-      ]
+      component: SpecieDetail,
     },
     {
       path: '/about',
