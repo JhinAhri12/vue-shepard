@@ -3,9 +3,9 @@
     <h1>{{ specie.name }}</h1>
     <img :src="specie.img" alt="">
     <div class="specie-detail">
-      <i>location : {{specie.location}}</i>
-      <b>popoulation : {{specie.popoulation}} <span>status : {{specie.status}}</span></b>
-      <p>{{specie.description}}</p>
+      <p><i>Location : {{specie.location}}</i></p>
+      <p><b>Popoulation : {{specie.population}}&nbsp;-&nbsp;<span>Status : {{specie.status}}</span></b></p>
+      <p class="desc">{{specie.description}}</p>
     </div>
 
     
@@ -40,3 +40,16 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.specie-detail{
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  width: 60%;
+  height: 30%;
+  margin: 0px auto;
+}
+span{
+  color :red
+}
+</style>

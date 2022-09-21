@@ -1,0 +1,63 @@
+@keyframes yellowfade {
+  from {
+    background: yellow;
+  }
+  to {
+    background: transparent;
+  }
+}
+#flashMessage {
+  animation-name: yellowfade;
+  animation-duration: 3s;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  padding: 30px;
+}
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+h4 {
+  font-size: 20px;
+}
+h2 {
+  color: #7895b2;
+}
+#app {
+  background-color: #f5efe6;
+}
+body {
+  margin: 0px;
+}
+.specie-container {
+  width: 60%;
+  height: 30%;
+  margin: 0px auto;
+}
+.specie-infos {
+  background-color: #e8dfca;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+h1 {
+  color: #205a95;
+}
+#footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  color: #7895b2;
+  text-align: center;
+  background-color: #e8dfca;
+}
